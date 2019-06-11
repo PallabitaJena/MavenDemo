@@ -7,7 +7,9 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'win1803'
+
+container: mcr.microsoft.com/windows/servercore:1803
 
 steps:
 - task: Maven@3
@@ -21,9 +23,9 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'install'
 
-#- script: |
- #   echo Starting the build
-  #  mvn package
-   # mvn install
+- script: |
+    echo Starting the build
+    mvn package
+    mvn install
 
-  #displayName: 'Build with Maven'
+  displayName: 'Build with Maven'
