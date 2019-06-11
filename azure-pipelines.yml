@@ -21,9 +21,9 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'install'
 
-- script: |
-    echo Starting the build
-    mvn package
-    mvn install
+#- script: |
+ #   echo Starting the build
+  #  mvn package
+   # mvn install
 
-  displayName: 'Build with Maven'
+  #displayName: 'Build with Maven'
