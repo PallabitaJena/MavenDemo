@@ -2,6 +2,7 @@ package chromePackage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class TestClass {
 	public static WebDriver driver;
@@ -10,6 +11,8 @@ public class TestClass {
 		driver=new ChromeDriver();
 		
 		driver.get("https://www.google.co.in/");
+		
+		Assert.assertEquals(true, false);
 
 	}
 
